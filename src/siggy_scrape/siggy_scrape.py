@@ -101,4 +101,6 @@ def siggy_scrape():
     #     time.sleep(30)
 
 if __name__ == "__main__":
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "git+https://github.com/JustAnotherArchivist/snscrape.git"])
+
     siggy_scrape()
