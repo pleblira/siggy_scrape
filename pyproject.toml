@@ -32,7 +32,7 @@ dependencies = [
 "Bug Tracker" = "https://github.com/pleblira/siggy_scrape/issues"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["/src"]
 
 [project.scripts]
 siggy_scrape = "siggy_scrape.siggy_scrape:siggy_scrape"
