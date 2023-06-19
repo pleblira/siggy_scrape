@@ -29,3 +29,11 @@ dependencies = [
 "Homepage" = "https://github.com/pleblira/siggy_scrape"
 "Bug Tracker" = "https://github.com/pleblira/siggy_scrape/issues"
 
+[project.scripts]
+siggy_scrape = "siggy_scrape.siggy_scrape:siggy_scrape"
+
+[tool.setuptools.package-data]
+myModule = ["*.txt"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
