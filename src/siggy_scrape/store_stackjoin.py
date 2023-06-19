@@ -5,14 +5,13 @@
 # import boto3
 # from tvdl.tvdl_launcher import twitter_video_dl_launcher
 import requests
-from remove_mentions_from_tweet_message import *
 from datetime import datetime
 from dotenv import load_dotenv, find_dotenv
 from pyairtable import Table
 import os
-from mp4_to_gif import *
-from remove_mentions_from_tweet_message import *
-from upload_to_voidcat_and_return_url import *
+from siggy_scrape.remove_mentions_from_tweet_message import *
+from siggy_scrape.mp4_to_gif import *
+from siggy_scrape.upload_to_voidcat_and_return_url import *
 
 ENV_FILE = find_dotenv()
 if ENV_FILE:

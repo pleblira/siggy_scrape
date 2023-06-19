@@ -1,16 +1,18 @@
 # from apscheduler.schedulers.background import BackgroundScheduler
+import os
+os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/bin/ffmpeg"
+
 from apscheduler.schedulers.blocking import BlockingScheduler
 import time
 import subprocess
 import sys
 import json
-from upload_to_voidcat_and_return_url import *
+from siggy_scrape.upload_to_voidcat_and_return_url import *
 import requests
-from mp4_to_gif import *
-from store_stackjoin import *
-from tweepy_send_tweet import *
-from stackjoin_add import *
-from send_tweet import *
+from siggy_scrape.mp4_to_gif import *
+from siggy_scrape.store_stackjoin import *
+from siggy_scrape.stackjoin_add import *
+from siggy_scrape.send_tweet import *
    
 def scrape_and_post():
     with open('hashtag.txt','r') as f:
@@ -102,5 +104,4 @@ def siggy_scrape():
 
 if __name__ == "__main__":
     subprocess.check_call([sys.executable, "-m", "pip", "install", "git+https://github.com/JustAnotherArchivist/snscrape.git"])
-
     siggy_scrape()
