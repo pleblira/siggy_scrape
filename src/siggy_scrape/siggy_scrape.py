@@ -73,6 +73,8 @@ def scrape_and_post():
               
 def siggy_scrape():
 
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "git+https://github.com/JustAnotherArchivist/snscrape.git"])
+
     with open('tweets.json','w') as f:
         pass
 

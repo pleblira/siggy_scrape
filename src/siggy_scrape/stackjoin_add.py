@@ -3,7 +3,7 @@ import os
 import json
 import webbrowser
 from datetime import datetime
-from remove_mentions_from_tweet_message import *
+from siggy_scrape.remove_mentions_from_tweet_message import *
 import subprocess
 
 def stackjoin_add(scraped_tweet):
